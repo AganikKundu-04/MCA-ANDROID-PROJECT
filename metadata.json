@@ -1,6 +1,0 @@
-{
-  "name": "LedgerFlow",
-  "description": "100% offline Java Android spending tracker with on-device Cactus Mirage UPI screenshot OCR, INR budgets, Canvas analytics, and CSV export.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
