@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LedgerFlow" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/lf_primary</item>
+        <item name="colorOnPrimary">@color/lf_on_primary</item>
+        <item name="colorPrimaryContainer">@color/lf_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/lf_on_primary_container</item>
+
+        <item name="colorSecondary">@color/lf_secondary</item>
+        <item name="colorOnSecondary">@color/lf_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/lf_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/lf_on_secondary_container</item>
+
+        <item name="android:colorBackground">@color/lf_background</item>
+        <item name="colorSurface">@color/lf_surface</item>
+        <item name="colorSurfaceVariant">@color/lf_surface_variant</item>
+        <item name="colorSurfaceContainerLow">@color/lf_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/lf_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/lf_surface_container_high</item>
+        <item name="colorOnSurface">@color/lf_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/lf_on_surface_variant</item>
+        <item name="colorOutline">@color/lf_outline</item>
+        <item name="colorOutlineVariant">@color/lf_outline_variant</item>
+
+        <item name="colorError">@color/lf_error</item>
+        <item name="colorOnError">@color/lf_on_error</item>
+        <item name="colorErrorContainer">@color/lf_error_container</item>
+        <item name="colorOnErrorContainer">@color/lf_on_error_container</item>
+
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.LedgerFlow.BottomSheet</item>
+        <item name="materialButtonStyle">@style/Widget.LedgerFlow.PrimaryButton</item>
+        <item name="chipStyle">@style/Widget.LedgerFlow.FilterChip</item>
+    </style>
+
+    <style name="ThemeOverlay.LedgerFlow.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.LedgerFlow.BottomSheet</item>
+    </style>
+
+    <style name="Widget.LedgerFlow.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/lf_surface</item>
+        <item name="android:elevation">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.LedgerFlow.TopSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.LedgerFlow.TopSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- Unslop + Apple HIG Inset Grouped Card: crisp 1dp hairline outline, zero drop shadow -->
+    <style name="Widget.LedgerFlow.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/lf_surface</item>
+        <item name="strokeColor">@color/lf_outline_variant</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardMaxElevation">0dp</item>
+        <item name="rippleColor">@color/lf_surface_variant</item>
+    </style>
+
+    <!-- Primary Flat Capsule Button (zero drop shadow) -->
+    <style name="Widget.LedgerFlow.PrimaryButton" parent="Widget.Material3.Button.UnelevatedButton">
+        <item name="backgroundTint">@color/lf_primary</item>
+        <item name="android:textColor">@color/lf_on_primary</item>
+        <item name="iconTint">@color/lf_on_primary</item>
+        <item name="cornerRadius">999dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- Apple HIG Soft Tinted Capsule Button with crisp 1dp hairline outline -->
+    <style name="Widget.LedgerFlow.TintedPillButton" parent="Widget.Material3.Button.TonalButton">
+        <item name="backgroundTint">@color/lf_primary_container</item>
+        <item name="android:textColor">@color/lf_on_primary_container</item>
+        <item name="iconTint">@color/lf_on_primary_container</item>
+        <item name="strokeColor">@color/lf_outline_variant</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">999dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- Apple HIG Segmented Control Button (1dp slate outline, zero shadow) -->
+    <style name="Widget.LedgerFlow.SegmentedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/lf_outline_variant</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Restrained Filter Chip with crisp 1dp border -->
+    <style name="Widget.LedgerFlow.FilterChip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/lf_outline_variant</item>
+        <item name="chipCornerRadius">12dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <!-- Outlined TextInputLayout with crisp 1dp box border & Apple rounded corners -->
+    <style name="Widget.LedgerFlow.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/lf_outline</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Apple HIG Semantic Dynamic Type Hierarchy (all sp-scaled) -->
+    <style name="TextAppearance.LedgerFlow.LargeTitle" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/lf_on_surface</item>
+    </style>
+
+    <style name="TextAppearance.LedgerFlow.Title2" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">@color/lf_on_surface</item>
+    </style>
+
+    <style name="TextAppearance.LedgerFlow.Headline" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/lf_on_surface</item>
+    </style>
+
+    <style name="TextAppearance.LedgerFlow.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/lf_on_surface</item>
+    </style>
+
+    <style name="TextAppearance.LedgerFlow.Subheadline" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/lf_on_surface_variant</item>
+    </style>
+
+    <style name="TextAppearance.LedgerFlow.Footnote" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/lf_on_surface_variant</item>
+    </style>
+
+    <!-- Tabular Numerals Text Appearances -->
+    <style name="TextAppearance.LedgerFlow.AmountHero" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:textColor">@color/lf_on_surface</item>
+    </style>
+
+    <style name="TextAppearance.LedgerFlow.AmountRow" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:textColor">@color/lf_on_surface</item>
+    </style>
+
+    <!-- Apple HIG Grouped Section Caption -->
+    <style name="TextAppearance.LedgerFlow.SectionHeader" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/lf_on_surface_variant</item>
+    </style>
+
+    <style name="TextAppearance.LedgerFlow.MonoCode" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
+        <item name="fontFamily">@font/jetbrains_mono</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:textColor">@color/lf_on_surface_variant</item>
+    </style>
+</resources>

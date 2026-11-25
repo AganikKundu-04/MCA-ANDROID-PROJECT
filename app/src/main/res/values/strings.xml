@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">LedgerFlow</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_expenses">Dashboard</string>
+    <string name="nav_budgets">Budgets</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_recurring">Recurring</string>
+    <string name="nav_categories">Categories</string>
+
+    <!-- Budgets Screen & Breach Alerts -->
+    <string name="budgets_title">Budgets</string>
+    <string name="budgets_empty_title">No categories yet</string>
+    <string name="budgets_empty_subtitle">Create a category first to assign a monthly budget limit and track overspending.</string>
+    <string name="budgets_section_limits">CATEGORY LIMITS</string>
+    <string name="budgets_section_unset">NO LIMIT SET</string>
+    <string name="budgets_set_limit">Set Limit</string>
+    <string name="budgets_remove_limit">Remove Monthly Limit</string>
+    <string name="dashboard_breach_title">Budget Limit Exceeded</string>
+    <string name="dashboard_warning_title">Approaching Budget Limit</string>
+    <string name="dashboard_manage_budgets">Review Category Budgets</string>
+
+    <!-- Common Actions -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_add">Add</string>
+    <string name="action_done">Done</string>
+    <string name="action_undo">Undo</string>
+
+    <!-- Expenses / Dashboard Screen -->
+    <string name="expenses_title">Dashboard</string>
+    <string name="expenses_month_total">This Month</string>
+    <string name="expenses_search_placeholder">Search expenses or notes</string>
+    <string name="expenses_all_categories">All</string>
+    <string name="expenses_uncategorized">Uncategorized</string>
+    <string name="expenses_empty_title">Your ledger is ready</string>
+    <string name="expenses_empty_subtitle">Tap the + button to log your first expense or set up recurring bills.</string>
+    <string name="expenses_filtered_empty_title">No matching expenses</string>
+    <string name="expenses_filtered_empty_subtitle">Try clearing your search query or switching category filters.</string>
+    <string name="expenses_add_title">New Expense</string>
+    <string name="expenses_edit_title">Edit Expense</string>
+    <string name="expenses_delete_confirm_title">Delete Expense?</string>
+    <string name="expenses_delete_confirm_message">This expense entry will be permanently removed from your ledger.</string>
+    <string name="expenses_auto_badge">Auto</string>
+
+    <!-- Categories Screen -->
+    <string name="categories_title">Categories</string>
+    <string name="categories_subtitle">Organize your spending with custom labels and optional colors</string>
+    <string name="categories_add_title">New Category</string>
+    <string name="categories_edit_title">Edit Category</string>
+    <string name="categories_name_label">Category Name</string>
+    <string name="categories_color_label">Color Code (Optional)</string>
+    <string name="categories_no_color">No color</string>
+    <string name="categories_hex_hint">#0F523E</string>
+    <string name="categories_empty_title">No custom categories yet</string>
+    <string name="categories_empty_subtitle">Create categories with optional colors to tag and analyze your spending.</string>
+    <string name="categories_delete_confirm_title">Delete Category?</string>
+
+    <!-- Reports Screen -->
+    <string name="reports_title">Spending Reports</string>
+    <string name="reports_distribution_title">Spending by Category</string>
+    <string name="reports_over_time_title">Spending Over Time</string>
+    <string name="reports_empty_title">Not enough data yet</string>
+    <string name="reports_empty_subtitle">Log expenses or widen your date and category filters to see visual summaries.</string>
+    <string name="reports_filter_custom">Custom</string>
+    <string name="reports_total_spent">Total Spent</string>
+    <string name="reports_daily_avg">Daily Avg</string>
+    <string name="reports_transactions">Entries</string>
+    <string name="reports_top_category">Top Category</string>
+
+    <!-- Recurring Screen -->
+    <string name="recurring_title">Recurring</string>
+    <string name="recurring_subtitle">Automatically logged on each due date</string>
+    <string name="recurring_add_title">New Recurring Expense</string>
+    <string name="recurring_edit_title">Edit Recurring Expense</string>
+    <string name="recurring_monthly_est">Est. Monthly Commitment</string>
+    <string name="recurring_active_count">Active Schedules</string>
+    <string name="recurring_empty_title">Automate regular bills</string>
+    <string name="recurring_empty_subtitle">Add rent, subscriptions, or daily commutes and LedgerFlow logs them automatically when due.</string>
+    <string name="recurring_delete_confirm_title">Delete Recurring Rule?</string>
+    <string name="recurring_delete_confirm_message">Future automatic entries will stop. Expenses already logged remain in your ledger.</string>
+    <string name="recurring_check_due">Process due now</string>
+
+    <!-- Appearance & Device Theming -->
+    <string name="appearance_title">Appearance</string>
+    <string name="appearance_button_desc">Appearance and theme settings</string>
+    <string name="appearance_mode_system">Device</string>
+    <string name="appearance_mode_light">Light</string>
+    <string name="appearance_mode_dark">Dark</string>
+    <string name="appearance_dynamic_title">Match Device Colors</string>
+    <string name="appearance_dynamic_subtitle_supported">Adapts palette automatically from your device wallpaper</string>
+    <string name="appearance_dynamic_subtitle_unsupported">Requires Android 12 or higher</string>
+    <string name="appearance_accent_title">Accent Color</string>
+    <string name="appearance_high_contrast_title">Increase Contrast</string>
+    <string name="appearance_high_contrast_subtitle">Strengthens borders, separators, and text contrast</string>
+
+    <!-- Settings Menu -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_button_desc">Open settings</string>
+    <string name="settings_currency_title">Currency</string>
+    <string name="settings_currency_picker_title">Select Currency</string>
+    <string name="settings_currency_search_hint">Search currency or code (USD, INR, EUR…)</string>
+    <string name="settings_decimals_title">Show Decimals</string>
+    <string name="settings_decimals_subtitle">Display fractional cents or paisa in amounts</string>
+    <string name="settings_budget_title">Monthly Spending Limit</string>
+    <string name="settings_budget_not_set">Not set</string>
+    <string name="settings_budget_dialog_title">Monthly Spending Limit</string>
+    <string name="settings_budget_dialog_hint">Enter monthly target amount</string>
+    <string name="settings_default_report_title">Default Report Period</string>
+    <string name="settings_week_start_title">Week Starts On</string>
+    <string name="settings_appearance_title">Appearance &amp; Device Theme</string>
+</resources>

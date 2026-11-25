@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Unslop + Apple HIG Light Mode — Neutral Slate Surfaces -->
+    <color name="lf_background">#F8FAFC</color>
+    <color name="lf_surface">#FFFFFF</color>
+    <color name="lf_surface_variant">#F1F5F9</color>
+    <color name="lf_surface_container_low">#F8FAFC</color>
+    <color name="lf_surface_container">#F1F5F9</color>
+    <color name="lf_surface_container_high">#E2E8F0</color>
+
+    <!-- High-Contrast Slate Typography & 1dp Hairline Outlines -->
+    <color name="lf_on_surface">#0F172A</color>
+    <color name="lf_on_surface_variant">#475569</color>
+    <color name="lf_outline">#CBD5E1</color>
+    <color name="lf_outline_variant">#E2E8F0</color>
+    <color name="lf_separator">#E2E8F0</color>
+
+    <!-- Single Crisp Accent — Deep Emerald / Teal -->
+    <color name="lf_primary">#0F766E</color>
+    <color name="lf_on_primary">#FFFFFF</color>
+    <color name="lf_primary_container">#CCFBF1</color>
+    <color name="lf_on_primary_container">#134E4A</color>
+
+    <!-- Secondary Neutral Slate -->
+    <color name="lf_secondary">#334155</color>
+    <color name="lf_on_secondary">#FFFFFF</color>
+    <color name="lf_secondary_container">#E2E8F0</color>
+    <color name="lf_on_secondary_container">#0F172A</color>
+
+    <!-- Semantic Budget Tiers: Deep Emerald (<80%), Amber (>=80%), Muted Crimson (>=100%) -->
+    <color name="lf_budget_healthy">#0F766E</color>
+    <color name="lf_budget_healthy_container">#CCFBF1</color>
+    <color name="lf_budget_warning">#B45309</color>
+    <color name="lf_budget_warning_container">#FEF3C7</color>
+    <color name="lf_budget_exceeded">#B91C1C</color>
+    <color name="lf_budget_exceeded_container">#FEE2E2</color>
+
+    <!-- Error / Destructive -->
+    <color name="lf_error">#B91C1C</color>
+    <color name="lf_on_error">#FFFFFF</color>
+    <color name="lf_error_container">#FEE2E2</color>
+    <color name="lf_on_error_container">#7F1D1D</color>
+
+    <!-- Swipe Delete Backdrop -->
+    <color name="lf_swipe_delete_bg">#B91C1C</color>
+</resources>
