@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboardRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lf_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/dashboardScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="104dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp">
+
+            <!-- Apple HIG Large Title Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp"
+                android:paddingBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tvDashboardLargeTitle"
+                    style="@style/TextAppearance.LedgerFlow.LargeTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/dashboard_title" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScanReceipt"
+                    style="@style/Widget.LedgerFlow.TintedPillButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/cd_scan_screenshot"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/action_scan_receipt"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_scan"
+                    app:iconSize="18dp" />
+            </LinearLayout>
+
+            <!-- Monthly Spend & Budget Progress Inset Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMonthlyBudget"
+                style="@style/Widget.LedgerFlow.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvMonthLabel"
+                            style="@style/TextAppearance.LedgerFlow.SectionHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/dashboard_month_spend_label" />
+
+                        <TextView
+                            android:id="@+id/tvBudgetBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFeatureSettings="tnum"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvMonthTotal"
+                        style="@style/TextAppearance.LedgerFlow.AmountHero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="₹0" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressMonthlyBudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:max="100"
+                        android:progress="0"
+                        app:indicatorColor="@color/lf_budget_healthy"
+                        app:trackColor="@color/lf_surface_container_high"
+                        app:trackCornerRadius="99dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvBudgetSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFeatureSettings="tnum"
+                        android:text="@string/dashboard_no_budget_hint"
+                        android:textColor="@color/lf_on_surface_variant"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Category Breakdown Section -->
+            <TextView
+                android:id="@+id/tvCategorySectionLabel"
+                style="@style/TextAppearance.LedgerFlow.SectionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/dashboard_category_breakdown" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategoryBreakdown"
+                style="@style/Widget.LedgerFlow.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <com.example.ui.chart.CategoryDonutChartView
+                        android:id="@+id/donutChart"
+                        android:layout_width="206dp"
+                        android:layout_height="206dp"
+                        android:layout_gravity="center_horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/containerCategoryLegend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Empty State Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEmptyState"
+                style="@style/Widget.LedgerFlow.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+                    <ImageView
+                        android:layout_width="76dp"
+                        android:layout_height="76dp"
+                        android:contentDescription="@string/cd_empty_state"
+                        android:src="@drawable/ic_empty_ledger" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:text="@string/dashboard_empty_title"
+                        android:textColor="@color/lf_on_surface"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="2dp"
+                        android:text="@string/dashboard_empty_subtitle"
+                        android:textColor="@color/lf_on_surface_variant"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Recent Transactions Section -->
+            <TextView
+                android:id="@+id/tvRecentSectionLabel"
+                style="@style/TextAppearance.LedgerFlow.SectionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/dashboard_recent_transactions" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRecentExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:text="@string/action_add_expense"
+        android:textColor="@color/lf_on_primary"
+        app:backgroundTint="@color/lf_primary"
+        app:elevation="0dp"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/lf_on_primary"
+        app:strokeColor="@color/lf_outline_variant"
+        app:strokeWidth="1dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

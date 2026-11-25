@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.22.1)
+project("cactus_jni" LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_library(
+        cactus_jni
+        SHARED
+        cactus_jni.cpp
+)
+
+find_library(
+        log-lib
+        log
+)
+
+target_include_directories(
+        cactus_jni
+        PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_link_libraries(
+        cactus_jni
+        ${log-lib}
+        dl
+)
